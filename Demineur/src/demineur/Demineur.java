@@ -39,7 +39,6 @@ public class Demineur {
 	// This method will spread mine in the game board
 	// It will also mutate the Demineur class nbMines value
 	private void placerMines(int nb) {
-		// Code a completer : placer nb mines
 		int cpt = 0, i, j;
 
 		while (cpt < nb) {
@@ -59,7 +58,7 @@ public class Demineur {
 	}
 
 	private void computeNbMinesAroundEachCell() {
-		// Iterating over this.champ cells
+		// Iterating over every this.champ cells
 		for (int line = 0; line < this.champ.length; line++) {
 			for (int col = 0; col < this.champ[line].length; col++) {
 				Cell cell = this.champ[line][col];
@@ -72,7 +71,7 @@ public class Demineur {
 	}
 
 	void isCellMine(Cell cell) throws BoumException {
-		if (cell.isMine) { // sous-entendu champ[lig][col]==true
+		if (cell.isMine) {
 			throw new BoumException(cell.line, cell.col);
 		}
 	}
@@ -119,17 +118,13 @@ public class Demineur {
 
 				boolean isNotRevealedAndNotMine = !iteratingOnCell.isMine
 						&& !iteratingOnCell.getCellRevealValue();
-
 				if (isNotRevealedAndNotMine) {
-
 					iteratingOnCell.RevealCell();
 
-					// boolean cellNbMinesAroundIs0 = iteratingOnCell.nbMinesAround == 0;
 					boolean cellIsNotInCellsToCheck = this.cellsToCheck.indexOf(iteratingOnCell) == -1;
 					if (cellIsNotInCellsToCheck) {
 						this.cellsToCheck.addElement(iteratingOnCell);
 					}
-
 				}
 			} catch (ArrayIndexOutOfBoundsException e) {
 			}
@@ -141,14 +136,13 @@ public class Demineur {
 		cell.RevealCell();
 		this.isCellMine(cell);
 		this.cellsToCheck.addElement(cell);
-		// this.addUnrevealedCellNeighborsToCellToCheck(cell);
 
 		int count = this.cellsToCheck.getCount();
 		do {
-			// Retrieving last slice element and shifting it
+			// Retrieving last slice element
 			Cell lastCell = this.cellsToCheck.getElementAtIndex(count - 1);
 
-			// If current cell nbMinesArount is 0 then look forward it's neighbors
+			// If lastCell nbMinesArount is 0 then look forward it's neighbors
 			boolean shouldCheckLastCellNeighbors = lastCell.nbMinesAround == 0;
 			if (shouldCheckLastCellNeighbors) {
 				this.addUnrevealedCellNeighborsToCellToCheck(lastCell);
@@ -158,7 +152,6 @@ public class Demineur {
 			// Reset count
 			count = this.cellsToCheck.getCount();
 		} while (count > 0);
-
 	}
 
 	public Cell GetCell(int line, int col) {
@@ -193,7 +186,7 @@ public class Demineur {
 		return s;
 	}
 
-	// This allow to just println the class
+	// This allow to println formatted board
 	@Override
 	public String toString() {
 		String s = "\n   ";

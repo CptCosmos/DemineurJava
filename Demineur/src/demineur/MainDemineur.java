@@ -8,7 +8,6 @@ public class MainDemineur {
 
 		System.out.println("*****" + Utilitaires.format("123443", 5) + "*****");
 
-		// ???
 		int N = 10000;
 		int[] compteur = new int[6];
 
@@ -23,7 +22,6 @@ public class MainDemineur {
 		System.out.println(Arrays.toString(compteur));
 
 		System.out.println((int) Math.floor(-5.88));
-		///
 
 		Scanner sc = new Scanner(System.in);
 
@@ -46,8 +44,8 @@ public class MainDemineur {
 				System.out.println("Operation succeeded");
 				System.out.println(jeu);
 
-				// Until we're implmenting the first it always on 0 you can use this to hit
-				// some area with 0
+				// Until we've implemented the first hit always on 0 we can use this to hit some
+				// check for 0 areas
 				// System.out.println(jeu.getRawBoard());
 			}
 		} catch (IllegalArgumentException e) {

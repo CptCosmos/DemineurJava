@@ -95,10 +95,12 @@ public class CellSlice {
         }
     }
 
+    // we should use java getter and setter
     public int getCount() {
         return this.count;
     }
 
+    // we should use java getter and setter
     public Cell getElementAtIndex(int index) {
         return this.array[index];
     }
