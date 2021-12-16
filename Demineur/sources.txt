@@ -1,4 +1,5 @@
 ./src/demineur/SaisieException.java
+./src/demineur/Cell.java
 ./src/demineur/Demineur.java
 ./src/demineur/MainDemineur.java
 ./src/demineur/BoumException.java
