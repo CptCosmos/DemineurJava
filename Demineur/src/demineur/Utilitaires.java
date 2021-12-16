@@ -44,7 +44,10 @@ public class Utilitaires {
 			try {
 				System.out.print(entete);
 				x = Integer.parseInt(sc.nextLine());
-				if ((x < min) || (x > max)) erreur = true;
+				if ((x < min) || (x > max)) {
+					erreur = true;
+					System.out.println("Veuillez entrer un entier entre "+min+" et "+max+"");
+				}
 			}
 			catch (NumberFormatException e) {
 				erreur = true;
