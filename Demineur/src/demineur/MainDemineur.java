@@ -25,12 +25,10 @@ public class MainDemineur {
 		System.out.println((int) Math.floor(-5.88));
 		///
 
-		System.out.println("TOTOTO");
-
 		Scanner sc = new Scanner(System.in);
 
+		Demineur jeu = new Demineur(15, 12, 25);
 		try {
-			Demineur jeu = new Demineur(15, 12, 25);
 			System.out.println(jeu);
 			int icol, ilig, nbmines;
 			while (true) {
@@ -44,14 +42,20 @@ public class MainDemineur {
 				Cell selectedCell = jeu.GetCell(ilig, icol);
 				///
 
-				nbmines = jeu.compteMines(selectedCell);
-				System.out.println("Nombre de mines: " + nbmines);
+				jeu.handleClickOnCell(selectedCell);
+				System.out.println("Operation succeeded");
+				System.out.println(jeu);
+
+				// Until we're implmenting the first it always on 0 you can use this to hit
+				// some area with 0
+				// System.out.println(jeu.getRawBoard());
 			}
 		} catch (IllegalArgumentException e) {
 			System.out.println(e.getMessage());
 		} catch (BoumException e) {
 			System.out.println(e.getMessage());
 		}
+		System.out.println(jeu);
 
 		sc.close();
 	}
