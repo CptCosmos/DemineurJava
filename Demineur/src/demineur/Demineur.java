@@ -24,7 +24,7 @@ public class Demineur{
 
 
 	private void placerMines(int nb) {
-		// Code à compléter : placer nb mines
+		// Code a completer : placer nb mines
 		int cpt = 0, i, j;
 		
 		while (cpt < nb) {

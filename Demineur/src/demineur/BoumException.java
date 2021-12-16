@@ -12,7 +12,7 @@ public class BoumException extends Exception {
 	
 	@Override
 	public String getMessage() {
-		return "Vous avez cliqué sur la mine située en ("+lig+","+col+"). Game Over!";
+		return "Vous avez clique sur la mine situe en ("+lig+","+col+"). Game Over!";
 	}
 	
 }

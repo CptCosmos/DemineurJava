@@ -17,7 +17,7 @@ public class MainDemineur {
 			compteur[alea]++;
 		}
 		for (int i = 1; i <= 5; i++) {
-			System.out.println("Fréquence de "+i+" : "+ (double) compteur[i]/N );
+			System.out.println("Frequence de "+i+" : "+ (double) compteur[i]/N );
 		}
 
 		System.out.println(Arrays.toString(compteur));
@@ -32,9 +32,9 @@ public class MainDemineur {
 			System.out.println(jeu);
 			int icol, ilig, nbmines;
 			for (int i=0; i<10; i++){
-				ilig = Utilitaires.saisirEntier(sc, "Entrez le numéro de ligne: ",
+				ilig = Utilitaires.saisirEntier(sc, "Entrez le numero de ligne: ",
 						                        0, jeu.getHauteur()-1);
-				icol = Utilitaires.saisirEntier(sc, "Entrez le numéro de colonne: ",
+				icol = Utilitaires.saisirEntier(sc, "Entrez le numero de colonne: ",
 						                        0, jeu.getLargeur()-1);
 				nbmines = jeu.compteMines(ilig, icol);
 				System.out.println("Nombre de mines: " + nbmines);

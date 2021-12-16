@@ -5,10 +5,10 @@ import java.util.*;
 public class Utilitaires {
 	
 	/***
-	 * renvoie une chaine d'au moins n caracteres composee d'espaces + s
-	 * @param s chaine e formater
-	 * @param n taille minimale de la chaene e retourner
-	 * @return s augmentee d'espaces au debut
+	 * renvoie une cha�ne d'au moins n caract�res compos�e d'espaces + s
+	 * @param s cha�ne � formater
+	 * @param n taille minimale de la cha�ne � retourner
+	 * @return s augment�e d'espaces au d�but
 	 */
 	public static String format(String s, int n) {
 		int l = s.length();
@@ -20,10 +20,10 @@ public class Utilitaires {
 	}
 	
 	/***
-	 * Retourne un entier choisi aleatoirement selon une loi uniforme entre 
+	 * Retourne un entier choisi al�atoirement selon une loi uniforme entre 
 	 *  les valeurs min et max
 	 *  Vous pouvez utiliser la fonction Math.Random() qui 
-	 *  renvoie un double tire aleatoirement selon une loi uniforme entre les 
+	 *  renvoie un double tir� al�atoirement selon une loi uniforme entre les 
 	 *  valeurs 0 inclus et 1 exclus :
 	 *  0 <= Math.Random() < 1
 	 * @param min
